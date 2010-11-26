@@ -1,6 +1,7 @@
 class StoreController < ApplicationController
   def index
     @products = Product.find_products_for_sale
+    session[:counter]
    end
 #   def add_to_cart
 #     @cart = find_cart

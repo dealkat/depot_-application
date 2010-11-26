@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101124051228) do
+ActiveRecord::Schema.define(:version => 20101126094339) do
 
   create_table "products", :force => true do |t|
     t.string   "title"
@@ -29,6 +29,18 @@ ActiveRecord::Schema.define(:version => 20101124051228) do
 
   add_index "sessions", ["session_id"], :name => "index_sessions_on_session_id"
   add_index "sessions", ["updated_at"], :name => "index_sessions_on_updated_at"
+
+  create_table "twitter_results", :force => true do |t|
+    t.integer  "tweet_id"
+    t.text     "tweet"
+    t.string   "screen_name"
+    t.string   "img_url"
+    t.datetime "tweet_date"
+    t.string   "source"
+    t.string   "keyword"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "login",                     :limit => 40

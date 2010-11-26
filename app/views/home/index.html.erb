@@ -1,0 +1,11 @@
+<h1>Home#index</h1>
+<p>Find me in app/views/home/index.html.erb</p>
+<% for twitter_result in @twitter_results %>
+<table border="1">
+  <tr>
+  <td>
+    <%= twitter_result.tweet %>
+  </td>
+  </tr>
+</table>
+<%end%>

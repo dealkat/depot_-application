@@ -6705,3 +6705,931 @@ Rendering template within layouts/store
 Rendering store/index
   [4;35;1mProduct Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `products`[0m
 Completed in 28ms (View: 18, DB: 1) | 200 OK [http://localhost/store]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProducts (20101122055650)
+Migrating to AddPriceToProduct (20101122061812)
+Migrating to AddTestData (20101122080026)
+Migrating to CreateUsers (20101122100811)
+Migrating to CreateSessions (20101124051228)
+Migrating to CreateTwitterResults (20101126094339)
+  [4;36;1mSQL (12.5ms)[0m   [0;1mCREATE TABLE `twitter_results` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `tweet_id` int(11), `tweet` text, `screen_name` varchar(255), `img_url` varchar(255), `tweet_date` datetime, `source` varchar(255), `keyword` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20101126094339')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `products`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `products`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `sessions`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mdescribe `sessions`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `sessions`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `twitter_results`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `twitter_results`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `twitter_results`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-26 15:21:27) [GET]
+  Session ID: 718cc8863dcf80efc3a307a017b912e2
+
+
+ActionController::RoutingError (No route matches "/home" with {:method=>:get}):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-26 15:21:36) [GET]
+  Session ID: 718cc8863dcf80efc3a307a017b912e2
+
+
+ActionController::RoutingError (No route matches "/home/keyword" with {:method=>:get}):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-26 15:21:39) [GET]
+  Session ID: 718cc8863dcf80efc3a307a017b912e2
+
+
+ActionController::RoutingError (No route matches "/home/keywords" with {:method=>:get}):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing HomeController#keywords (for 127.0.0.1 at 2010-11-26 15:22:19) [GET]
+  Session ID: 718cc8863dcf80efc3a307a017b912e2
+Rendering home/keywords
+
+
+ActionView::TemplateError (undefined method `keyword_path' for #<ActionView::Base:0xb67fcd60>) on line #3 of app/views/home/keywords.html.erb:
+1: <h1>Home#keywords</h1>
+2: <p>Find me in app/views/home/keywords.html.erb</p>
+3: <% form_tag :keyword do %>
+4:   <%=  text_field_tag 'keyword' %>
+5:   <%= submit_tag "search" %>
+6: <%end%>
+
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/polymorphic_routes.rb:112:in `__send__'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/polymorphic_routes.rb:112:in `polymorphic_url'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/polymorphic_routes.rb:119:in `polymorphic_path'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/url_helper.rb:91:in `url_for'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/form_tag_helper.rb:436:in `html_options_for_form'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/object/misc.rb:39:in `returning'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/form_tag_helper.rb:434:in `html_options_for_form'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/form_tag_helper.rb:37:in `form_tag'
+    app/views/home/keywords.html.erb:3
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/template.rb:73:in `render_template'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:256:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1174:in `render_for_file'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:896:in `render_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:868:in `render_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1248:in `default_render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1254:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (96.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (0.8ms)
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing HomeController#keywords (for 127.0.0.1 at 2010-11-26 15:22:32) [GET]
+  Session ID: 718cc8863dcf80efc3a307a017b912e2
+Rendering home/keywords
+
+
+ActionView::TemplateError (undefined method `keyword_path' for #<ActionView::Base:0xb689c978>) on line #3 of app/views/home/keywords.html.erb:
+1: <h1>Home#keywords</h1>
+2: <p>Find me in app/views/home/keywords.html.erb</p>
+3: <% form_tag :keyword do %>
+4:   <%=  text_field_tag 'keyword' %>
+5:   <%= submit_tag "search" %>
+6: <%end%>
+
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/polymorphic_routes.rb:112:in `__send__'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/polymorphic_routes.rb:112:in `polymorphic_url'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/polymorphic_routes.rb:119:in `polymorphic_path'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/url_helper.rb:91:in `url_for'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/form_tag_helper.rb:436:in `html_options_for_form'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/object/misc.rb:39:in `returning'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/form_tag_helper.rb:434:in `html_options_for_form'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/form_tag_helper.rb:37:in `form_tag'
+    app/views/home/keywords.html.erb:3
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/template.rb:73:in `render_template'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:256:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1174:in `render_for_file'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:896:in `render_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:868:in `render_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1248:in `default_render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1254:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (37.8ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (56.0ms)
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing HomeController#keywords (for 127.0.0.1 at 2010-11-26 15:22:56) [GET]
+  Session ID: 718cc8863dcf80efc3a307a017b912e2
+Rendering home/keywords
+Completed in 8ms (View: 4, DB: 1) | 200 OK [http://localhost/home/keywords]
+
+
+Processing HomeController#keywords (for 127.0.0.1 at 2010-11-26 15:25:16) [POST]
+  Session ID: 718cc8863dcf80efc3a307a017b912e2
+  Parameters: {"commit"=>"search", "authenticity_token"=>"094c5a4f3e12e9c63e625ec4b079976a445807e5", "keyword"=>"hello"}
+Completed in 4ms (View: 0, DB: 2) | 200 OK [http://localhost/home/keywords]
+
+
+Processing HomeController#keywords (for 127.0.0.1 at 2010-11-26 15:30:02) [POST]
+  Session ID: 718cc8863dcf80efc3a307a017b912e2
+  Parameters: {"commit"=>"search", "authenticity_token"=>"094c5a4f3e12e9c63e625ec4b079976a445807e5", "keyword"=>"hello"}
+Completed in 1280ms (View: 0, DB: 0) | 200 OK [http://localhost/home/keywords]
+
+
+Processing HomeController#keywords (for 127.0.0.1 at 2010-11-26 15:30:31) [POST]
+  Session ID: 718cc8863dcf80efc3a307a017b912e2
+  Parameters: {"commit"=>"search", "authenticity_token"=>"094c5a4f3e12e9c63e625ec4b079976a445807e5", "keyword"=>"hello"}
+Completed in 1392ms (View: 0, DB: 1) | 200 OK [http://localhost/home/keywords]
+
+
+Processing HomeController#keywords (for 127.0.0.1 at 2010-11-26 15:34:01) [POST]
+  Session ID: 718cc8863dcf80efc3a307a017b912e2
+  Parameters: {"commit"=>"search", "authenticity_token"=>"094c5a4f3e12e9c63e625ec4b079976a445807e5", "keyword"=>"hello"}
+Completed in 1500ms (View: 0, DB: 1) | 200 OK [http://localhost/home/keywords]
+
+
+Processing HomeController#keywords (for 127.0.0.1 at 2010-11-26 15:52:02) [POST]
+  Session ID: 718cc8863dcf80efc3a307a017b912e2
+  Parameters: {"commit"=>"search", "authenticity_token"=>"094c5a4f3e12e9c63e625ec4b079976a445807e5", "keyword"=>"hello"}
+  [4;36;1mTwitterResult Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `twitter_results`[0m
+Completed in 1316ms (View: 0, DB: 2) | 200 OK [http://localhost/home/keywords]
+
+
+Processing HomeController#keywords (for 127.0.0.1 at 2010-11-26 15:53:07) [POST]
+  Session ID: 718cc8863dcf80efc3a307a017b912e2
+  Parameters: {"commit"=>"search", "authenticity_token"=>"094c5a4f3e12e9c63e625ec4b079976a445807e5", "keyword"=>"hello"}
+  [4;35;1mTwitterResult Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `twitter_results`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+Completed in 1316ms (View: 0, DB: 2) | 200 OK [http://localhost/home/keywords]
+
+
+Processing HomeController#keywords (for 127.0.0.1 at 2010-11-26 15:53:35) [POST]
+  Session ID: 718cc8863dcf80efc3a307a017b912e2
+  Parameters: {"commit"=>"search", "authenticity_token"=>"094c5a4f3e12e9c63e625ec4b079976a445807e5", "keyword"=>"hello"}
+  [4;35;1mTwitterResult Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `twitter_results`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Completed in 1624ms (View: 0, DB: 2) | 200 OK [http://localhost/home/keywords]
+
+
+Processing HomeController#keywords (for 127.0.0.1 at 2010-11-26 15:53:53) [POST]
+  Session ID: 718cc8863dcf80efc3a307a017b912e2
+  Parameters: {"commit"=>"search", "authenticity_token"=>"094c5a4f3e12e9c63e625ec4b079976a445807e5", "keyword"=>"hello"}
+  [4;35;1mTwitterResult Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `twitter_results`[0m
+Completed in 1593ms (View: 0, DB: 2) | 200 OK [http://localhost/home/keywords]
+
+
+Processing HomeController#keywords (for 127.0.0.1 at 2010-11-26 15:55:20) [POST]
+  Session ID: 718cc8863dcf80efc3a307a017b912e2
+  Parameters: {"commit"=>"search", "authenticity_token"=>"094c5a4f3e12e9c63e625ec4b079976a445807e5", "keyword"=>"hello"}
+  [4;36;1mTwitterResult Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `twitter_results`[0m
+Completed in 1309ms (View: 0, DB: 2) | 200 OK [http://localhost/home/keywords]
+
+
+Processing HomeController#keywords (for 127.0.0.1 at 2010-11-26 15:56:21) [POST]
+  Session ID: 718cc8863dcf80efc3a307a017b912e2
+  Parameters: {"commit"=>"search", "authenticity_token"=>"094c5a4f3e12e9c63e625ec4b079976a445807e5", "keyword"=>"hello"}
+  [4;35;1mTwitterResult Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `twitter_results`[0m
+Completed in 1286ms (View: 0, DB: 2) | 200 OK [http://localhost/home/keywords]
+
+
+Processing HomeController#keywords (for 127.0.0.1 at 2010-11-26 15:56:44) [POST]
+  Session ID: 718cc8863dcf80efc3a307a017b912e2
+  Parameters: {"commit"=>"search", "authenticity_token"=>"094c5a4f3e12e9c63e625ec4b079976a445807e5", "keyword"=>"hello"}
+  [4;36;1mTwitterResult Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `twitter_results`[0m
+Completed in 1293ms (View: 0, DB: 2) | 200 OK [http://localhost/home/keywords]
+
+
+Processing HomeController#keywords (for 127.0.0.1 at 2010-11-26 15:57:07) [POST]
+  Session ID: 718cc8863dcf80efc3a307a017b912e2
+  Parameters: {"commit"=>"search", "authenticity_token"=>"094c5a4f3e12e9c63e625ec4b079976a445807e5", "keyword"=>"hello"}
+  [4;35;1mTwitterResult Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `twitter_results`[0m
+Completed in 1298ms (View: 0, DB: 2) | 200 OK [http://localhost/home/keywords]
+
+
+Processing HomeController#keywords (for 127.0.0.1 at 2010-11-26 15:57:53) [POST]
+  Session ID: 718cc8863dcf80efc3a307a017b912e2
+  Parameters: {"commit"=>"search", "authenticity_token"=>"094c5a4f3e12e9c63e625ec4b079976a445807e5", "keyword"=>"hello"}
+  [4;36;1mTwitterResult Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `twitter_results`[0m
+Completed in 1598ms (View: 0, DB: 2) | 200 OK [http://localhost/home/keywords]
+
+
+Processing HomeController#keywords (for 127.0.0.1 at 2010-11-26 16:00:04) [POST]
+  Session ID: 718cc8863dcf80efc3a307a017b912e2
+  Parameters: {"commit"=>"search", "authenticity_token"=>"094c5a4f3e12e9c63e625ec4b079976a445807e5", "keyword"=>"sriram"}
+  [4;35;1mTwitterResult Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `twitter_results`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTwitterResult Create (0.4ms)[0m   [0mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(8082381432954881, '2010-11-26 10:30:06', '2010-11-26 10:30:06', '@sriramsharjah Hi Sriram, Please let me know a contact that I can reach you at.', NULL, '&lt;a href=&quot;http://twitter.com/&quot;&gt;web&lt;/a&gt;', 'sriram', 'http://twitter.com/priyank125', '2010-11-26 08:59:24')[0m
+  [4;36;1mSQL (4.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTwitterResult Create (0.3ms)[0m   [0;1mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(8014970713280512, '2010-11-26 10:30:06', '2010-11-26 10:30:06', 'RT @de_340583031-Yoga, Neun Schritte in die Freiheit: R. Sriram[Dez 01, 2010] http://amzn.to/hUtpIS', NULL, '&lt;a href=&quot;http://twitterfeed.com&quot; rel=&quot;nofollow&quot;&gt;twitterfeed&lt;/a&gt;', 'sriram', 'http://twitter.com/yogatirol', '2010-11-26 04:31:32')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTwitterResult Create (0.3ms)[0m   [0mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(8008966659379200, '2010-11-26 10:30:06', '2010-11-26 10:30:06', 'RT @rethas: Some info on dhikshitar and the sampradaya pradarshini. By TM Krishna http://j.mp/fXTMYY and last werk by Sriram V http://j.mp/hNJR4S', NULL, '&lt;a href=&quot;http://twitter.com/&quot; rel=&quot;nofollow&quot;&gt;Twitter for iPhone&lt;/a&gt;', 'sriram', 'http://twitter.com/swathi2212', '2010-11-26 04:07:41')[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTwitterResult Create (0.3ms)[0m   [0;1mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(8004869281554432, '2010-11-26 10:30:06', '2010-11-26 10:30:06', 'The Sriram Hebbar Daily is out! http://bit.ly/9abSEM &#9656; Top stories today by @amitvarma @karnatakacom @livemint @medianama @avinash', NULL, '&lt;a href=&quot;http://paper.li&quot; rel=&quot;nofollow&quot;&gt;Paper.li&lt;/a&gt;', 'sriram', 'http://twitter.com/sriramhebbar', '2010-11-26 03:51:24')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTwitterResult Create (0.3ms)[0m   [0mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(7999082882670592, '2010-11-26 10:30:06', '2010-11-26 10:30:06', 'Some info on dhikshitar and the sampradaya pradarshini. By TM Krishna http://j.mp/fXTMYY and last werk by Sriram V http://j.mp/hNJR4S', NULL, '&lt;a href=&quot;http://twitter.com/&quot; rel=&quot;nofollow&quot;&gt;Twitter for iPhone&lt;/a&gt;', 'sriram', 'http://twitter.com/rethas', '2010-11-26 03:28:24')[0m
+  [4;36;1mSQL (4.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTwitterResult Create (0.3ms)[0m   [0;1mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(7998037959905280, '2010-11-26 10:30:06', '2010-11-26 10:30:06', '#tedx #WEBiversity TEDxSRM - Sriram Iyer - Experiences Sharing - Working with Children from Challenging Situations.a... http://ow.ly/1aamxO', NULL, '&lt;a href=&quot;http://www.hootsuite.com&quot; rel=&quot;nofollow&quot;&gt;HootSuite&lt;/a&gt;', 'sriram', 'http://twitter.com/whymandesign', '2010-11-26 03:24:15')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTwitterResult Create (0.3ms)[0m   [0mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(7994648140189696, '2010-11-26 10:30:06', '2010-11-26 10:30:06', 'Tamil tribute to Muthuswami Dikshitar - Sriram V: http://bit.ly/f0B2VV', NULL, '&lt;a href=&quot;http://www.tweetdeck.com&quot; rel=&quot;nofollow&quot;&gt;TweetDeck&lt;/a&gt;', 'sriram', 'http://twitter.com/ramsabode', '2010-11-26 03:10:47')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTwitterResult Create (0.3ms)[0m   [0;1mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(7989394640207872, '2010-11-26 10:30:06', '2010-11-26 10:30:06', 'Yoga, Neun Schritte in die Freiheit: R. Sriram[Dez 01, 2010] http://amzn.to/hUtpIS', NULL, '&lt;a href=&quot;http://twitterfeed.com&quot; rel=&quot;nofollow&quot;&gt;twitterfeed&lt;/a&gt;', 'sriram', 'http://twitter.com/de_340583031', '2010-11-26 02:49:54')[0m
+  [4;35;1mSQL (8.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTwitterResult Create (0.3ms)[0m   [0mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(7894092516163584, '2010-11-26 10:30:06', '2010-11-26 10:30:06', 'Sriram Kh&#233;: &quot;First World&quot; India v. &quot;Third World&quot; India http://bit.ly/ibwfIo', NULL, '&lt;a href=&quot;http://twitterfeed.com&quot; rel=&quot;nofollow&quot;&gt;twitterfeed&lt;/a&gt;', 'sriram', 'http://twitter.com/OnADge', '2010-11-25 20:31:12')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTwitterResult Create (0.3ms)[0m   [0;1mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(7894092189011968, '2010-11-26 10:30:06', '2010-11-26 10:30:06', 'Sriram Kh&#233;: &quot;First World&quot; India v. &quot;Third World&quot; India http://bit.ly/ibwfIo', NULL, '&lt;a href=&quot;http://twitterfeed.com&quot; rel=&quot;nofollow&quot;&gt;twitterfeed&lt;/a&gt;', 'sriram', 'http://twitter.com/gmalhotra23', '2010-11-25 20:31:12')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTwitterResult Create (0.3ms)[0m   [0mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(7856471932928000, '2010-11-26 10:30:06', '2010-11-26 10:30:06', 'Jess Delgado, Tiffany Alvord, AJ Rafael, Dave Days, Karmin, Sid Sriram &amp;amp; Dom Liberati - Imag http://www.blogtopsites.com/p/6848450', NULL, '&lt;a href=&quot;http://www.blogtopsites.com&quot; rel=&quot;nofollow&quot;&gt;BlogTopSites - Blog Connect&lt;/a&gt;', 'sriram', 'http://twitter.com/jorgebokeron', '2010-11-25 18:01:43')[0m
+  [4;36;1mSQL (11.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTwitterResult Create (0.3ms)[0m   [0;1mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(7851186614964224, '2010-11-26 10:30:06', '2010-11-26 10:30:06', 'Sriram Kh&#233;: &quot;First World&quot; India v. &quot;Third World&quot; India: During the last presidential primaries, Senator John Edw... http://bit.ly/ez7PRX', NULL, '&lt;a href=&quot;http://twitterfeed.com&quot; rel=&quot;nofollow&quot;&gt;twitterfeed&lt;/a&gt;', 'sriram', 'http://twitter.com/dentay85', '2010-11-25 17:40:43')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTwitterResult Create (0.3ms)[0m   [0mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(7836492122558464, '2010-11-26 10:30:06', '2010-11-26 10:30:06', 'Jess Delgado, Tiffany Alvord, AJ Rafael, Dave Days, Karmin, Sid Sriram &amp; Dom Liberati - Imagine [Originally By J... http://bit.ly/f2MaV0', NULL, '&lt;a href=&quot;http://twitterfeed.com&quot; rel=&quot;nofollow&quot;&gt;twitterfeed&lt;/a&gt;', 'sriram', 'http://twitter.com/LyricsVideoClip', '2010-11-25 16:42:19')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTwitterResult Create (0.3ms)[0m   [0;1mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(7836491967369217, '2010-11-26 10:30:06', '2010-11-26 10:30:06', 'Jess Delgado, Tiffany Alvord, AJ Rafael, Dave Days, Karmin, Sid Sriram &amp; Dom Liberati - Imagine [Originally By J... http://bit.ly/f2MaV0', NULL, '&lt;a href=&quot;http://twitterfeed.com&quot; rel=&quot;nofollow&quot;&gt;twitterfeed&lt;/a&gt;', 'sriram', 'http://twitter.com/jorgebokeron', '2010-11-25 16:42:19')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTwitterResult Create (0.3ms)[0m   [0mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(7814310386475008, '2010-11-26 10:30:06', '2010-11-26 10:30:06', 'Iedig.com Story Singer Anuradha sriram photos http://dlvr.it/99DKx', NULL, '&lt;a href=&quot;http://dlvr.it&quot; rel=&quot;nofollow&quot;&gt;dlvr.it&lt;/a&gt;', 'sriram', 'http://twitter.com/iedig', '2010-11-25 15:14:11')[0m
+  [4;36;1mSQL (3.1ms)[0m   [0;1mCOMMIT[0m
+Rendering home/keywords
+Completed in 1814ms (View: 3, DB: 46) | 200 OK [http://localhost/home/keywords]
+
+
+Processing HomeController#keywords (for 127.0.0.1 at 2010-11-26 16:01:48) [POST]
+  Session ID: 718cc8863dcf80efc3a307a017b912e2
+  Parameters: {"commit"=>"search", "authenticity_token"=>"094c5a4f3e12e9c63e625ec4b079976a445807e5", "keyword"=>"sriram"}
+  [4;35;1mTwitterResult Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `twitter_results`[0m
+Completed in 1759ms (View: 0, DB: 2) | 200 OK [http://localhost/home/keywords]
+
+
+Processing HomeController#keywords (for 127.0.0.1 at 2010-11-26 16:02:31) [POST]
+  Session ID: 718cc8863dcf80efc3a307a017b912e2
+  Parameters: {"commit"=>"search", "authenticity_token"=>"094c5a4f3e12e9c63e625ec4b079976a445807e5", "keyword"=>"sriram"}
+  [4;36;1mTwitterResult Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `twitter_results`[0m
+Completed in 1741ms (View: 0, DB: 2) | 200 OK [http://localhost/home/keywords]
+
+
+Processing HomeController#keywords (for 127.0.0.1 at 2010-11-26 16:03:41) [POST]
+  Session ID: 718cc8863dcf80efc3a307a017b912e2
+  Parameters: {"commit"=>"search", "authenticity_token"=>"094c5a4f3e12e9c63e625ec4b079976a445807e5", "keyword"=>"sriram"}
+  [4;35;1mTwitterResult Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `twitter_results`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTwitterResult Create (0.3ms)[0m   [0mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(8082381432954881, '2010-11-26 10:33:43', '2010-11-26 10:33:43', '@sriramsharjah Hi Sriram, Please let me know a contact that I can reach you at.', NULL, '<a href=\"http://twitter.com/\">web</a>', 'sriram', 'http://twitter.com/priyank125', '2010-11-26 08:59:24')[0m
+  [4;36;1mSQL (7.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTwitterResult Create (0.3ms)[0m   [0;1mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(8014970713280512, '2010-11-26 10:33:43', '2010-11-26 10:33:43', 'RT @de_340583031-Yoga, Neun Schritte in die Freiheit: R. Sriram[Dez 01, 2010] http://amzn.to/hUtpIS', NULL, '<a href=\"http://twitterfeed.com\" rel=\"nofollow\">twitterfeed</a>', 'sriram', 'http://twitter.com/yogatirol', '2010-11-26 04:31:32')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTwitterResult Create (0.3ms)[0m   [0mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(8008966659379200, '2010-11-26 10:33:43', '2010-11-26 10:33:43', 'RT @rethas: Some info on dhikshitar and the sampradaya pradarshini. By TM Krishna http://j.mp/fXTMYY and last werk by Sriram V http://j.mp/hNJR4S', NULL, '<a href=\"http://twitter.com/\" rel=\"nofollow\">Twitter for iPhone</a>', 'sriram', 'http://twitter.com/swathi2212', '2010-11-26 04:07:41')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTwitterResult Create (0.3ms)[0m   [0;1mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(8004869281554432, '2010-11-26 10:33:43', '2010-11-26 10:33:43', 'The Sriram Hebbar Daily is out! http://bit.ly/9abSEM &#9656; Top stories today by @amitvarma @karnatakacom @livemint @medianama @avinash', NULL, '<a href=\"http://paper.li\" rel=\"nofollow\">Paper.li</a>', 'sriram', 'http://twitter.com/sriramhebbar', '2010-11-26 03:51:24')[0m
+  [4;35;1mSQL (40.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTwitterResult Create (0.4ms)[0m   [0mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(7999082882670592, '2010-11-26 10:33:43', '2010-11-26 10:33:43', 'Some info on dhikshitar and the sampradaya pradarshini. By TM Krishna http://j.mp/fXTMYY and last werk by Sriram V http://j.mp/hNJR4S', NULL, '<a href=\"http://twitter.com/\" rel=\"nofollow\">Twitter for iPhone</a>', 'sriram', 'http://twitter.com/rethas', '2010-11-26 03:28:24')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTwitterResult Create (0.3ms)[0m   [0;1mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(7998037959905280, '2010-11-26 10:33:43', '2010-11-26 10:33:43', '#tedx #WEBiversity TEDxSRM - Sriram Iyer - Experiences Sharing - Working with Children from Challenging Situations.a... http://ow.ly/1aamxO', NULL, '<a href=\"http://www.hootsuite.com\" rel=\"nofollow\">HootSuite</a>', 'sriram', 'http://twitter.com/whymandesign', '2010-11-26 03:24:15')[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTwitterResult Create (0.3ms)[0m   [0mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(7994648140189696, '2010-11-26 10:33:43', '2010-11-26 10:33:43', 'Tamil tribute to Muthuswami Dikshitar - Sriram V: http://bit.ly/f0B2VV', NULL, '<a href=\"http://www.tweetdeck.com\" rel=\"nofollow\">TweetDeck</a>', 'sriram', 'http://twitter.com/ramsabode', '2010-11-26 03:10:47')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTwitterResult Create (0.3ms)[0m   [0;1mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(7989394640207872, '2010-11-26 10:33:43', '2010-11-26 10:33:43', 'Yoga, Neun Schritte in die Freiheit: R. Sriram[Dez 01, 2010] http://amzn.to/hUtpIS', NULL, '<a href=\"http://twitterfeed.com\" rel=\"nofollow\">twitterfeed</a>', 'sriram', 'http://twitter.com/de_340583031', '2010-11-26 02:49:54')[0m
+  [4;35;1mSQL (2.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTwitterResult Create (0.3ms)[0m   [0mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(7894092516163584, '2010-11-26 10:33:43', '2010-11-26 10:33:43', 'Sriram Kh&#233;: &quot;First World&quot; India v. &quot;Third World&quot; India http://bit.ly/ibwfIo', NULL, '<a href=\"http://twitterfeed.com\" rel=\"nofollow\">twitterfeed</a>', 'sriram', 'http://twitter.com/OnADge', '2010-11-25 20:31:12')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTwitterResult Create (0.3ms)[0m   [0;1mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(7894092189011968, '2010-11-26 10:33:43', '2010-11-26 10:33:43', 'Sriram Kh&#233;: &quot;First World&quot; India v. &quot;Third World&quot; India http://bit.ly/ibwfIo', NULL, '<a href=\"http://twitterfeed.com\" rel=\"nofollow\">twitterfeed</a>', 'sriram', 'http://twitter.com/gmalhotra23', '2010-11-25 20:31:12')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTwitterResult Create (0.3ms)[0m   [0mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(7856471932928000, '2010-11-26 10:33:43', '2010-11-26 10:33:43', 'Jess Delgado, Tiffany Alvord, AJ Rafael, Dave Days, Karmin, Sid Sriram &amp;amp; Dom Liberati - Imag http://www.blogtopsites.com/p/6848450', NULL, '<a href=\"http://www.blogtopsites.com\" rel=\"nofollow\">BlogTopSites - Blog Connect</a>', 'sriram', 'http://twitter.com/jorgebokeron', '2010-11-25 18:01:43')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTwitterResult Create (0.4ms)[0m   [0;1mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(7851186614964224, '2010-11-26 10:33:43', '2010-11-26 10:33:43', 'Sriram Kh&#233;: &quot;First World&quot; India v. &quot;Third World&quot; India: During the last presidential primaries, Senator John Edw... http://bit.ly/ez7PRX', NULL, '<a href=\"http://twitterfeed.com\" rel=\"nofollow\">twitterfeed</a>', 'sriram', 'http://twitter.com/dentay85', '2010-11-25 17:40:43')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTwitterResult Create (0.3ms)[0m   [0mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(7836492122558464, '2010-11-26 10:33:43', '2010-11-26 10:33:43', 'Jess Delgado, Tiffany Alvord, AJ Rafael, Dave Days, Karmin, Sid Sriram &amp; Dom Liberati - Imagine [Originally By J... http://bit.ly/f2MaV0', NULL, '<a href=\"http://twitterfeed.com\" rel=\"nofollow\">twitterfeed</a>', 'sriram', 'http://twitter.com/LyricsVideoClip', '2010-11-25 16:42:19')[0m
+  [4;36;1mSQL (8.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTwitterResult Create (0.3ms)[0m   [0;1mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(7836491967369217, '2010-11-26 10:33:43', '2010-11-26 10:33:43', 'Jess Delgado, Tiffany Alvord, AJ Rafael, Dave Days, Karmin, Sid Sriram &amp; Dom Liberati - Imagine [Originally By J... http://bit.ly/f2MaV0', NULL, '<a href=\"http://twitterfeed.com\" rel=\"nofollow\">twitterfeed</a>', 'sriram', 'http://twitter.com/jorgebokeron', '2010-11-25 16:42:19')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTwitterResult Create (0.3ms)[0m   [0mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(7814310386475008, '2010-11-26 10:33:43', '2010-11-26 10:33:43', 'Iedig.com Story Singer Anuradha sriram photos http://dlvr.it/99DKx', NULL, '<a href=\"http://dlvr.it\" rel=\"nofollow\">dlvr.it</a>', 'sriram', 'http://twitter.com/iedig', '2010-11-25 15:14:11')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Rendering home/keywords
+Completed in 1806ms (View: 3, DB: 73) | 200 OK [http://localhost/home/keywords]
+
+
+Processing HomeController#keywords (for 127.0.0.1 at 2010-11-26 16:04:50) [POST]
+  Session ID: 718cc8863dcf80efc3a307a017b912e2
+  Parameters: {"commit"=>"search", "authenticity_token"=>"094c5a4f3e12e9c63e625ec4b079976a445807e5", "keyword"=>"sriram"}
+  [4;35;1mTwitterResult Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `twitter_results`[0m
+Completed in 1321ms (View: 0, DB: 2) | 200 OK [http://localhost/home/keywords]
+
+
+Processing HomeController#keywords (for 127.0.0.1 at 2010-11-26 16:05:14) [POST]
+  Session ID: 718cc8863dcf80efc3a307a017b912e2
+  Parameters: {"commit"=>"search", "authenticity_token"=>"094c5a4f3e12e9c63e625ec4b079976a445807e5", "keyword"=>"sriram"}
+  [4;36;1mTwitterResult Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `twitter_results`[0m
+Completed in 1589ms (View: 0, DB: 2) | 200 OK [http://localhost/home/keywords]
+
+
+Processing HomeController#keywords (for 127.0.0.1 at 2010-11-26 16:05:34) [POST]
+  Session ID: 718cc8863dcf80efc3a307a017b912e2
+  Parameters: {"commit"=>"search", "authenticity_token"=>"094c5a4f3e12e9c63e625ec4b079976a445807e5", "keyword"=>"sriram"}
+  [4;35;1mTwitterResult Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `twitter_results`[0m
+Completed in 1604ms (View: 0, DB: 2) | 200 OK [http://localhost/home/keywords]
+
+
+Processing HomeController#keywords (for 127.0.0.1 at 2010-11-26 16:06:11) [POST]
+  Session ID: 718cc8863dcf80efc3a307a017b912e2
+  Parameters: {"commit"=>"search", "authenticity_token"=>"094c5a4f3e12e9c63e625ec4b079976a445807e5", "keyword"=>"sriram"}
+  [4;36;1mTwitterResult Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `twitter_results`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTwitterResult Create (0.3ms)[0m   [0;1mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(8082381432954881, '2010-11-26 10:36:13', '2010-11-26 10:36:13', '@sriramsharjah Hi Sriram, Please let me know a contact that I can reach you at.', NULL, '<a href=\"http://twitter.com/\">web</a>', 'sriram', 'priyank125', '2010-11-26 08:59:24')[0m
+  [4;35;1mSQL (9.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTwitterResult Create (0.3ms)[0m   [0mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(8014970713280512, '2010-11-26 10:36:13', '2010-11-26 10:36:13', 'RT @de_340583031-Yoga, Neun Schritte in die Freiheit: R. Sriram[Dez 01, 2010] http://amzn.to/hUtpIS', NULL, '<a href=\"http://twitterfeed.com\" rel=\"nofollow\">twitterfeed</a>', 'sriram', 'yogatirol', '2010-11-26 04:31:32')[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTwitterResult Create (0.3ms)[0m   [0;1mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(8008966659379200, '2010-11-26 10:36:13', '2010-11-26 10:36:13', 'RT @rethas: Some info on dhikshitar and the sampradaya pradarshini. By TM Krishna http://j.mp/fXTMYY and last werk by Sriram V http://j.mp/hNJR4S', NULL, '<a href=\"http://twitter.com/\" rel=\"nofollow\">Twitter for iPhone</a>', 'sriram', 'swathi2212', '2010-11-26 04:07:41')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTwitterResult Create (0.3ms)[0m   [0mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(8004869281554432, '2010-11-26 10:36:13', '2010-11-26 10:36:13', 'The Sriram Hebbar Daily is out! http://bit.ly/9abSEM &#9656; Top stories today by @amitvarma @karnatakacom @livemint @medianama @avinash', NULL, '<a href=\"http://paper.li\" rel=\"nofollow\">Paper.li</a>', 'sriram', 'sriramhebbar', '2010-11-26 03:51:24')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTwitterResult Create (0.3ms)[0m   [0;1mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(7999082882670592, '2010-11-26 10:36:13', '2010-11-26 10:36:13', 'Some info on dhikshitar and the sampradaya pradarshini. By TM Krishna http://j.mp/fXTMYY and last werk by Sriram V http://j.mp/hNJR4S', NULL, '<a href=\"http://twitter.com/\" rel=\"nofollow\">Twitter for iPhone</a>', 'sriram', 'rethas', '2010-11-26 03:28:24')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTwitterResult Create (0.3ms)[0m   [0mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(7998037959905280, '2010-11-26 10:36:13', '2010-11-26 10:36:13', '#tedx #WEBiversity TEDxSRM - Sriram Iyer - Experiences Sharing - Working with Children from Challenging Situations.a... http://ow.ly/1aamxO', NULL, '<a href=\"http://www.hootsuite.com\" rel=\"nofollow\">HootSuite</a>', 'sriram', 'whymandesign', '2010-11-26 03:24:15')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTwitterResult Create (0.3ms)[0m   [0;1mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(7994648140189696, '2010-11-26 10:36:13', '2010-11-26 10:36:13', 'Tamil tribute to Muthuswami Dikshitar - Sriram V: http://bit.ly/f0B2VV', NULL, '<a href=\"http://www.tweetdeck.com\" rel=\"nofollow\">TweetDeck</a>', 'sriram', 'ramsabode', '2010-11-26 03:10:47')[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTwitterResult Create (0.3ms)[0m   [0mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(7989394640207872, '2010-11-26 10:36:13', '2010-11-26 10:36:13', 'Yoga, Neun Schritte in die Freiheit: R. Sriram[Dez 01, 2010] http://amzn.to/hUtpIS', NULL, '<a href=\"http://twitterfeed.com\" rel=\"nofollow\">twitterfeed</a>', 'sriram', 'de_340583031', '2010-11-26 02:49:54')[0m
+  [4;36;1mSQL (19.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTwitterResult Create (0.3ms)[0m   [0;1mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(7894092516163584, '2010-11-26 10:36:13', '2010-11-26 10:36:13', 'Sriram Kh&#233;: &quot;First World&quot; India v. &quot;Third World&quot; India http://bit.ly/ibwfIo', NULL, '<a href=\"http://twitterfeed.com\" rel=\"nofollow\">twitterfeed</a>', 'sriram', 'OnADge', '2010-11-25 20:31:12')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTwitterResult Create (0.3ms)[0m   [0mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(7894092189011968, '2010-11-26 10:36:13', '2010-11-26 10:36:13', 'Sriram Kh&#233;: &quot;First World&quot; India v. &quot;Third World&quot; India http://bit.ly/ibwfIo', NULL, '<a href=\"http://twitterfeed.com\" rel=\"nofollow\">twitterfeed</a>', 'sriram', 'gmalhotra23', '2010-11-25 20:31:12')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTwitterResult Create (0.3ms)[0m   [0;1mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(7856471932928000, '2010-11-26 10:36:13', '2010-11-26 10:36:13', 'Jess Delgado, Tiffany Alvord, AJ Rafael, Dave Days, Karmin, Sid Sriram &amp;amp; Dom Liberati - Imag http://www.blogtopsites.com/p/6848450', NULL, '<a href=\"http://www.blogtopsites.com\" rel=\"nofollow\">BlogTopSites - Blog Connect</a>', 'sriram', 'jorgebokeron', '2010-11-25 18:01:43')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTwitterResult Create (0.3ms)[0m   [0mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(7851186614964224, '2010-11-26 10:36:13', '2010-11-26 10:36:13', 'Sriram Kh&#233;: &quot;First World&quot; India v. &quot;Third World&quot; India: During the last presidential primaries, Senator John Edw... http://bit.ly/ez7PRX', NULL, '<a href=\"http://twitterfeed.com\" rel=\"nofollow\">twitterfeed</a>', 'sriram', 'dentay85', '2010-11-25 17:40:43')[0m
+  [4;36;1mSQL (2.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTwitterResult Create (0.3ms)[0m   [0;1mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(7836492122558464, '2010-11-26 10:36:13', '2010-11-26 10:36:13', 'Jess Delgado, Tiffany Alvord, AJ Rafael, Dave Days, Karmin, Sid Sriram &amp; Dom Liberati - Imagine [Originally By J... http://bit.ly/f2MaV0', NULL, '<a href=\"http://twitterfeed.com\" rel=\"nofollow\">twitterfeed</a>', 'sriram', 'LyricsVideoClip', '2010-11-25 16:42:19')[0m
+  [4;35;1mSQL (7.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTwitterResult Create (0.3ms)[0m   [0mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(7836491967369217, '2010-11-26 10:36:13', '2010-11-26 10:36:13', 'Jess Delgado, Tiffany Alvord, AJ Rafael, Dave Days, Karmin, Sid Sriram &amp; Dom Liberati - Imagine [Originally By J... http://bit.ly/f2MaV0', NULL, '<a href=\"http://twitterfeed.com\" rel=\"nofollow\">twitterfeed</a>', 'sriram', 'jorgebokeron', '2010-11-25 16:42:19')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTwitterResult Create (0.3ms)[0m   [0;1mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(7814310386475008, '2010-11-26 10:36:13', '2010-11-26 10:36:13', 'Iedig.com Story Singer Anuradha sriram photos http://dlvr.it/99DKx', NULL, '<a href=\"http://dlvr.it\" rel=\"nofollow\">dlvr.it</a>', 'sriram', 'iedig', '2010-11-25 15:14:11')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Rendering home/keywords
+Completed in 1791ms (View: 3, DB: 51) | 200 OK [http://localhost/home/keywords]
+
+
+Processing HomeController#keywords (for 127.0.0.1 at 2010-11-26 16:07:56) [POST]
+  Session ID: 718cc8863dcf80efc3a307a017b912e2
+  Parameters: {"commit"=>"search", "authenticity_token"=>"094c5a4f3e12e9c63e625ec4b079976a445807e5", "keyword"=>"sriram"}
+  [4;36;1mTwitterResult Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `twitter_results`[0m
+Completed in 1610ms (View: 0, DB: 1) | 200 OK [http://localhost/home/keywords]
+
+
+Processing HomeController#keywords (for 127.0.0.1 at 2010-11-26 16:08:11) [POST]
+  Session ID: 718cc8863dcf80efc3a307a017b912e2
+  Parameters: {"commit"=>"search", "authenticity_token"=>"094c5a4f3e12e9c63e625ec4b079976a445807e5", "keyword"=>"sriram"}
+  [4;35;1mTwitterResult Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `twitter_results`[0m
+Completed in 1612ms (View: 0, DB: 2) | 200 OK [http://localhost/home/keywords]
+
+
+Processing HomeController#keywords (for 127.0.0.1 at 2010-11-26 16:15:02) [POST]
+  Session ID: 718cc8863dcf80efc3a307a017b912e2
+  Parameters: {"commit"=>"search", "authenticity_token"=>"094c5a4f3e12e9c63e625ec4b079976a445807e5", "keyword"=>"sriram"}
+  [4;36;1mTwitterResult Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `twitter_results`[0m
+Completed in 2350ms (View: 0, DB: 2) | 200 OK [http://localhost/home/keywords]
+
+
+Processing HomeController#keywords (for 127.0.0.1 at 2010-11-26 16:15:23) [POST]
+  Session ID: 718cc8863dcf80efc3a307a017b912e2
+  Parameters: {"commit"=>"search", "authenticity_token"=>"094c5a4f3e12e9c63e625ec4b079976a445807e5", "keyword"=>"sriram"}
+  [4;35;1mTwitterResult Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `twitter_results`[0m
+Completed in 1564ms (View: 0, DB: 2) | 200 OK [http://localhost/home/keywords]
+
+
+Processing HomeController#keywords (for 127.0.0.1 at 2010-11-26 16:15:40) [POST]
+  Session ID: 718cc8863dcf80efc3a307a017b912e2
+  Parameters: {"commit"=>"search", "authenticity_token"=>"094c5a4f3e12e9c63e625ec4b079976a445807e5", "keyword"=>"sriram"}
+  [4;36;1mTwitterResult Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `twitter_results`[0m
+Completed in 1658ms (View: 0, DB: 1) | 200 OK [http://localhost/home/keywords]
+
+
+Processing HomeController#keywords (for 127.0.0.1 at 2010-11-26 16:17:46) [POST]
+  Session ID: 718cc8863dcf80efc3a307a017b912e2
+  Parameters: {"commit"=>"search", "authenticity_token"=>"094c5a4f3e12e9c63e625ec4b079976a445807e5", "keyword"=>"sriram"}
+  [4;35;1mTwitterResult Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `twitter_results`[0m
+Completed in 1629ms (View: 0, DB: 5) | 200 OK [http://localhost/home/keywords]
+
+
+Processing HomeController#keywords (for 127.0.0.1 at 2010-11-26 16:18:12) [POST]
+  Session ID: 718cc8863dcf80efc3a307a017b912e2
+  Parameters: {"commit"=>"search", "authenticity_token"=>"094c5a4f3e12e9c63e625ec4b079976a445807e5", "keyword"=>"sriram"}
+  [4;36;1mTwitterResult Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `twitter_results`[0m
+Completed in 2393ms (View: 0, DB: 2) | 200 OK [http://localhost/home/keywords]
+
+
+Processing HomeController#keywords (for 127.0.0.1 at 2010-11-26 16:18:15) [POST]
+  Session ID: 718cc8863dcf80efc3a307a017b912e2
+  Parameters: {"commit"=>"search", "authenticity_token"=>"094c5a4f3e12e9c63e625ec4b079976a445807e5", "keyword"=>"sriram"}
+  [4;35;1mTwitterResult Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `twitter_results`[0m
+Completed in 1613ms (View: 0, DB: 2) | 200 OK [http://localhost/home/keywords]
+
+
+Processing HomeController#keywords (for 127.0.0.1 at 2010-11-26 16:18:18) [POST]
+  Session ID: 718cc8863dcf80efc3a307a017b912e2
+  Parameters: {"commit"=>"search", "authenticity_token"=>"094c5a4f3e12e9c63e625ec4b079976a445807e5", "keyword"=>"sriram"}
+  [4;36;1mTwitterResult Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `twitter_results`[0m
+Completed in 1629ms (View: 0, DB: 2) | 200 OK [http://localhost/home/keywords]
+
+
+Processing HomeController#keywords (for 127.0.0.1 at 2010-11-26 16:18:22) [POST]
+  Session ID: 718cc8863dcf80efc3a307a017b912e2
+  Parameters: {"commit"=>"search", "authenticity_token"=>"094c5a4f3e12e9c63e625ec4b079976a445807e5", "keyword"=>"sriram"}
+  [4;35;1mTwitterResult Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `twitter_results`[0m
+Completed in 1788ms (View: 0, DB: 2) | 200 OK [http://localhost/home/keywords]
+
+
+Processing HomeController#keywords (for 127.0.0.1 at 2010-11-26 16:18:35) [POST]
+  Session ID: 718cc8863dcf80efc3a307a017b912e2
+  Parameters: {"commit"=>"search", "authenticity_token"=>"094c5a4f3e12e9c63e625ec4b079976a445807e5", "keyword"=>"iphone"}
+  [4;36;1mTwitterResult Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `twitter_results`[0m
+Completed in 1742ms (View: 0, DB: 2) | 200 OK [http://localhost/home/keywords]
+
+
+Processing HomeController#keywords (for 127.0.0.1 at 2010-11-26 16:18:40) [POST]
+  Session ID: 718cc8863dcf80efc3a307a017b912e2
+  Parameters: {"commit"=>"search", "authenticity_token"=>"094c5a4f3e12e9c63e625ec4b079976a445807e5", "keyword"=>"iphone"}
+  [4;35;1mTwitterResult Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `twitter_results`[0m
+Completed in 1791ms (View: 0, DB: 2) | 200 OK [http://localhost/home/keywords]
+
+
+Processing HomeController#keywords (for 127.0.0.1 at 2010-11-26 16:18:45) [POST]
+  Session ID: 718cc8863dcf80efc3a307a017b912e2
+  Parameters: {"commit"=>"search", "authenticity_token"=>"094c5a4f3e12e9c63e625ec4b079976a445807e5", "keyword"=>"iphone"}
+  [4;36;1mTwitterResult Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `twitter_results`[0m
+Completed in 1965ms (View: 0, DB: 2) | 200 OK [http://localhost/home/keywords]
+
+
+Processing HomeController#keywords (for 127.0.0.1 at 2010-11-26 16:18:58) [POST]
+  Session ID: 718cc8863dcf80efc3a307a017b912e2
+  Parameters: {"commit"=>"search", "authenticity_token"=>"094c5a4f3e12e9c63e625ec4b079976a445807e5", "keyword"=>"iphone"}
+  [4;35;1mTwitterResult Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `twitter_results`[0m
+Completed in 1587ms (View: 0, DB: 2) | 200 OK [http://localhost/home/keywords]
+
+
+Processing HomeController#keywords (for 127.0.0.1 at 2010-11-26 16:21:34) [POST]
+  Session ID: 718cc8863dcf80efc3a307a017b912e2
+  Parameters: {"commit"=>"search", "authenticity_token"=>"094c5a4f3e12e9c63e625ec4b079976a445807e5", "keyword"=>"iphone"}
+  [4;36;1mTwitterResult Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `twitter_results`[0m
+Completed in 1592ms (View: 0, DB: 2) | 200 OK [http://localhost/home/keywords]
+
+
+Processing HomeController#keywords (for 127.0.0.1 at 2010-11-26 16:21:48) [POST]
+  Session ID: 718cc8863dcf80efc3a307a017b912e2
+  Parameters: {"commit"=>"search", "authenticity_token"=>"094c5a4f3e12e9c63e625ec4b079976a445807e5", "keyword"=>"iphone"}
+  [4;35;1mTwitterResult Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `twitter_results`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTwitterResult Create (0.3ms)[0m   [0mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(8110647627743232, '2010-11-26 10:51:50', '2010-11-26 10:51:50', 'MobileMe is the service from Apple that keeps your iPhone, iPad, iPod touch, Mac, and PC in&#8230; http://goo.gl/B1yt1', 'http://a2.twimg.com/profile_images/1169542954/iPodNano6thIcon_normal.jpg', '<a href=\"http://www.google.com/support/youtube/bin/answer.py?hl=en&answer=164577\" rel=\"nofollow\">Google</a>', 'iphone', 'iPodNano6thG', '2010-11-26 10:51:43')[0m
+  [4;36;1mSQL (3.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTwitterResult Create (0.3ms)[0m   [0;1mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(8110643102093312, '2010-11-26 10:51:50', '2010-11-26 10:51:50', 'So elogiar q a bateria do iPhone vai embora...', 'http://a2.twimg.com/profile_images/1144520838/image_normal.jpg', '<a href=\"http://twitter.com/\" rel=\"nofollow\">Twitter for iPhone</a>', 'iphone', 'vivi_san', '2010-11-26 10:51:42')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTwitterResult Create (0.2ms)[0m   [0mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(8110642607161344, '2010-11-26 10:51:50', '2010-11-26 10:51:50', 'RT @fromkk: &#12360;&#12359;&#12540;&#12540;&#12540;&#12540;&#12540;&#12540;&#12540;&#12540;&#12540;&#12540;&#12540;&#65281;&#65281; QT @redbulljapan Red Bull BC One - iPhone &#12392; iPad &#12398;&#12466;&#12540;&#12512;&#12434;&#30330;&#22770;&#38283;&#22987;&#12375;&#12414;&#12375;&#12383;&#65281;http://win.gs/bconegame #rbbc1', 'http://a1.twimg.com/profile_images/1164100585/11143760_824005626_83large_normal.jpg', '<a href=\"http://twitter.com/\">web</a>', 'iphone', 'DDSHT', '2010-11-26 10:51:42')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTwitterResult Create (0.2ms)[0m   [0;1mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(8110638316388352, '2010-11-26 10:51:50', '2010-11-26 10:51:50', 'Iphone 4 http://goo.gl/fb/6A9eD &#1063;&#1077;&#1083;&#1103;&#1073;&#1080;&#1085;&#1089;&#1082;', 'http://s.twimg.com/a/1287512878/images/default_profile_6_normal.png', '<a href=\"http://www.google.com/support/youtube/bin/answer.py?hl=en&answer=164577\" rel=\"nofollow\">Google</a>', 'iphone', 'chelbay_ru', '2010-11-26 10:51:41')[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTwitterResult Create (0.2ms)[0m   [0mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(8110637376868353, '2010-11-26 10:51:50', '2010-11-26 10:51:50', 'http://www.iphonehellas.gr/22986/yannis-kontos-greek-iphone-devs-promo-2010/ http://yfrog.com/9fta80j', 'http://a0.twimg.com/profile_images/291933804/kontos_3_web_normal.jpg', '<a href=\"http://twitter.com\" rel=\"nofollow\">Tweetie for Mac</a>', 'iphone', 'yannisimages', '2010-11-26 10:51:41')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTwitterResult Create (0.2ms)[0m   [0;1mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(8110636739338241, '2010-11-26 10:51:50', '2010-11-26 10:51:50', '@patytiemy eu tinha iphone qdo lancou dai monte de gente comecou a ter ai peguei o blackberry hahahahaha quem qser ter igual vai ter q paga', 'http://static.twitter.com/images/default_profile_normal.png', '<a href=\"http://twitter.com/\">web</a>', 'iphone', 'satonitroficial', '2010-11-26 10:51:41')[0m
+  [4;35;1mSQL (8.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTwitterResult Create (0.2ms)[0m   [0mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(8110634331799552, '2010-11-26 10:51:50', '2010-11-26 10:51:50', '14th most tweeted VIDEO in Tech || Japan Goggles - The free offline japanese reader iPhone app http://bit.ly/dSVBeE', 'http://a1.twimg.com/profile_images/1118207233/logocuadrado2_normal.png', '<a href=\"http://www.zocial.tv\" rel=\"nofollow\">ZOCIAL.tv</a>', 'iphone', 'ZOCIALtv', '2010-11-26 10:51:40')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTwitterResult Create (0.2ms)[0m   [0;1mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(8110633908178944, '2010-11-26 10:51:50', '2010-11-26 10:51:50', 'iPhone&#12398;SSTP&#12463;&#12521;&#12452;&#12450;&#12531;&#12488;&#12450;&#12503;&#12522;&#12392;&#12363;&#20986;&#12394;&#12356;&#12363;&#12394;', 'http://a3.twimg.com/profile_images/1066942995/wasawasa_normal.jpg', '<a href=\"http://twitter.com/\" rel=\"nofollow\">Twitter for iPhone</a>', 'iphone', 'wasa_star', '2010-11-26 10:51:40')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTwitterResult Create (0.2ms)[0m   [0mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(8110630338830336, '2010-11-26 10:51:50', '2010-11-26 10:51:50', '&#9678;&#12473;&#12510;&#12540;&#12488;&#12501;&#12457;&#12531;&#65288;iPhone&#12289;Android&#65289;&#12395;&#23550;&#24540;&#12375;&#12383;&#25658;&#24111;CMS&#12469;&#12540;&#12499;&#12473;&#12290;&#12300;&#12464;&#12523;&#12540;&#12499;&#12540;CMS&#12301;&#12399;&#12289;&#39640;&#21697;&#36074;&#12394;&#12506;&#12540;&#12472;&#20316;&#25104;&#27231;&#33021;&#12392;&#19968;&#33324;&#12398;&#26041;&#12391;&#12418;&#30452;&#24863;&#30340;&#12395;&#25805;&#20316;&#12391;&#12365;&#12427;&#12300;&#20351;&#12356;&#12420;&#12377;&#12373;&#12301;&#12434;&#29305;&#24500;&#12392;&#12375;&#12383;&#25658;&#24111;CMS&#12391;&#12377;&#12290;&#8658; http://bit.ly/bjCq2h 19:51', 'http://a2.twimg.com/profile_images/1144526910/_____normal.jpg', '<a href=\"http://twitter.com/\">web</a>', 'iphone', 'yamaet', '2010-11-26 10:51:39')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTwitterResult Create (0.2ms)[0m   [0;1mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(8110618359889921, '2010-11-26 10:51:50', '2010-11-26 10:51:50', 'Universal&#12450;&#12503;&#12522;&#12465;&#12540;&#12471;&#12519;&#12531;&#65306;\n&#23436;&#20840;&#12395;&#12377;&#12409;&#12390;&#12398;&#12487;&#12496;&#12452;&#12473;&#19978;&#12391;&#65288;&#35336;&#31639;&#12373;&#12399;&#12289;iPhone&#12289;iPod&#65289;&#27231;&#33021;&#36861;&#21152;&#12398;&#12467;&#12473;&#12488;&#12434;&gt;&#65281;', 'http://a2.twimg.com/profile_images/1175324722/icon-150_normal.png', '<a href=\"http://twitter.com/\">web</a>', 'iphone', 'ipadweather', '2010-11-26 10:51:36')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTwitterResult Create (0.2ms)[0m   [0mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(8110614555660288, '2010-11-26 10:51:50', '2010-11-26 10:51:50', 'learning a lot about #iOS dev. It\'s so fun coding for iPad &amp; iPhone!', 'http://a2.twimg.com/profile_images/1135653686/41790_129012663813772_9024_n_normal.jpg', '<a href=\"http://twitter.com\" rel=\"nofollow\">Tweetie for Mac</a>', 'iphone', '51bits', '2010-11-26 10:51:35')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTwitterResult Create (0.2ms)[0m   [0;1mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(8110608125788161, '2010-11-26 10:51:50', '2010-11-26 10:51:50', 'Nitropanic : Bomb Alert &#65509;230 &#8658; &#65509;115 http://iphone.orelabo.jp/app/403106962/ This game requires iPhone 3GS or iPhone 4.\n\nVibrate at the', 'http://a3.twimg.com/profile_images/75269499/sale_normal.png', '<a href=\"http://iphone.orelabo.jp\" rel=\"nofollow\">3152bot</a>', 'iphone', 'iphone_app_sale', '2010-11-26 10:51:34')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTwitterResult Create (0.2ms)[0m   [0mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(8110597178654721, '2010-11-26 10:51:50', '2010-11-26 10:51:50', 'ik moet echt eens opletten of ik mijn iphone op stil heb staan. hoorde net keihard een liedje uit mijn tas, tijdens een pw. t____t', 'http://a0.twimg.com/profile_images/1172437084/1134510226_5_KID4_1_normal.jpg', '<a href=\"http://twitter.com/\" rel=\"nofollow\">Twitter for iPhone</a>', 'iphone', '__amyjones', '2010-11-26 10:51:31')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTwitterResult Create (0.2ms)[0m   [0;1mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(8110596469821440, '2010-11-26 10:51:50', '2010-11-26 10:51:50', 'RT @NISSAcully2: RT @tascals: RT @vaniajonas: RT @tascals: mamah mau slr, mamah mau iPhone 4G, mamah mau $$$$ (y)', 'http://a2.twimg.com/profile_images/1175182262/61710_1624496181122_1498023780_1627902_1663823_n_normal.jpg', '<a href=\"http://www.ubertwitter.com/bb/download.php\" rel=\"nofollow\">ÜberTwitter</a>', 'iphone', 'saskiaptr', '2010-11-26 10:51:31')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTwitterResult Create (0.2ms)[0m   [0mINSERT INTO `twitter_results` (`tweet_id`, `created_at`, `updated_at`, `tweet`, `img_url`, `source`, `keyword`, `screen_name`, `tweet_date`) VALUES(8110594884370432, '2010-11-26 10:51:50', '2010-11-26 10:51:50', 'Add my friend code: 203 553 141 Click the link to join my gang http://bit.ly/originalgz #iphone #ipod #ipad #OG', 'http://s.twimg.com/a/1289607957/images/default_profile_5_normal.png', '<a href=\"http://www.ogapponline.com\" rel=\"nofollow\">Original Gangstaz</a>', 'iphone', 'Ebullient_dan', '2010-11-26 10:51:31')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Rendering home/keywords
+Completed in 1961ms (View: 2, DB: 39) | 200 OK [http://localhost/home/keywords]
+
+
+Processing HomeController#keywords (for 127.0.0.1 at 2010-11-26 16:26:55) [POST]
+  Session ID: 718cc8863dcf80efc3a307a017b912e2
+  Parameters: {"commit"=>"search", "authenticity_token"=>"094c5a4f3e12e9c63e625ec4b079976a445807e5", "keyword"=>"iphone"}
+  [4;35;1mTwitterResult Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `twitter_results`[0m
+
+
+TypeError (type mismatch: String given):
+    /app/controllers/home_controller.rb:17:in `=~'
+    /app/controllers/home_controller.rb:17:in `keywords'
+    /app/controllers/home_controller.rb:13:in `each'
+    /app/controllers/home_controller.rb:13:in `keywords'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (30.8ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (0.7ms)
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing HomeController#keywords (for 127.0.0.1 at 2010-11-26 16:27:21) [POST]
+  Session ID: 718cc8863dcf80efc3a307a017b912e2
+  Parameters: {"commit"=>"search", "authenticity_token"=>"094c5a4f3e12e9c63e625ec4b079976a445807e5", "keyword"=>"iphone"}
+  [4;36;1mTwitterResult Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `twitter_results`[0m
+Completed in 1601ms (View: 0, DB: 2) | 200 OK [http://localhost/home/keywords]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-11-26 16:36:15) [GET]
+  Session ID: 718cc8863dcf80efc3a307a017b912e2
+  [4;35;1mTwitterResult Load (0.7ms)[0m   [0mSELECT * FROM `twitter_results` [0m
+Rendering home/index
+  [4;36;1mTwitterResult Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `twitter_results`[0m
+Completed in 18ms (View: 8, DB: 1) | 200 OK [http://localhost/home/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-11-26 16:36:35) [GET]
+  Session ID: 718cc8863dcf80efc3a307a017b912e2
+  [4;35;1mTwitterResult Load (0.2ms)[0m   [0mSELECT * FROM `twitter_results` [0m
+Rendering home/index
+  [4;36;1mTwitterResult Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `twitter_results`[0m
+Completed in 17ms (View: 8, DB: 1) | 200 OK [http://localhost/home/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-11-26 17:05:09) [GET]
+  Session ID: 718cc8863dcf80efc3a307a017b912e2
+  [4;35;1mTwitterResult Load (0.2ms)[0m   [0mSELECT * FROM `twitter_results` [0m
+Rendering home/index
+  [4;36;1mTwitterResult Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `twitter_results`[0m
+Completed in 83ms (View: 74, DB: 1) | 200 OK [http://localhost/home/]
