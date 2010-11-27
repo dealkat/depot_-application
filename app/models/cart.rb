@@ -9,7 +9,9 @@ class Cart
       current_item.increment_quantity
     else
       @items << CartItem.new(product)
+      #@items << current_item
     end
+#    current_item
   end
   def total_price
   @items.sum { |item| item.price }
