@@ -1,11 +1,11 @@
 <% if cart_item == @current_item %>
   <% id = "current_item" %>
 <%else%>
-  <tr>
-<%end%>
-    <td><%= cart_item.quantity %> &times </td>
-     <td> <%=h cart_item.title %></td>
-    <td><%= number_to_currency(cart_item.price) %> </td>
+<tr>
+  <%end%>
+
+    <td><%= cart_item.quantity %> &times; </td>
+    <td> <%= cart_item.title %></td>
+     <%#*<td> <%= link_to cart_item.title, :action => :remove_from_cart, :id => @product %><!--</td>%>-->
+     <td class="item-price"><%= number_to_currency(cart_item.price) %> </td>
   </tr>
-
-

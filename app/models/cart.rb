@@ -13,10 +13,15 @@ class Cart
     end
 #    current_item
   end
+#  def remove_from_cart(product)
+#    current_item = @items.find{|item| item.product == product}
+#    current_item.decrement_quantity
+#  end
   def total_price
   @items.sum { |item| item.price }
   end
+  def total_items
+    @items.sum { |item| item.quantity  }
+  end
 
 end
-
-
