@@ -49,7 +49,7 @@ return
 
 end
 
-Now this is an important part where you need to set the call back url Which u will define while you register your app at twitter OAuth site. Again add this to the UserController
+# Now this is an important part where you need to set the call back url Which u will define while you register your app at twitter OAuth site. Again add this to the UserController
 
 def callback
 @request_token = OAuth::RequestToken.new(UsersController.consumer,
@@ -57,8 +57,7 @@ session[:request_token],
 session[:request_token_secret])
 # Exchange the request token for an access token.
 @access_token = @request_token.get_access_token(:oauth_verifier => params[:oauth_verifier])
-@response = UsersController.consumer.request(:get, ‘/account/verify_credentials.json’,
-@access_token, { :scheme => :query_string })
+@response = UsersController.consumer.request(:get, ‘/account/verify_credentials.json’, @access_token, { :scheme => :query_string })
 case @response
 when Net::HTTPSuccess
 user_info = JSON.parse(@response.body)

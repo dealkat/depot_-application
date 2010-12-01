@@ -38,7 +38,28 @@ end
 
   def empty_cart
     session[:cart] = nil
-    redirect_to_index
+    redirect_to_index(nil)
+  end
+
+  def checkout
+    @cart = find_cart
+    if @cart.items.empty?
+      redirect_to_index("No items in the cart")
+    else
+      @order = Order.new
+    end
+  end
+
+  def save_order
+    @cart = find_cart
+    @order = Order.new(params[:order]) # creating an object of all data in the form
+    @order.add_line_items_from_cart(@cart)
+    if @order.save
+      session[:cart] = nil
+      redirect_to_index("Thanks for the order")
+    else
+      render :action => :checkout
+    end
   end
 
 private
@@ -46,7 +67,7 @@ def find_cart
     session[:cart] ||= Cart.new
   end
 
-def redirect_to_index(msg = nil)
+def redirect_to_index(msg)
     flash[:notice] = msg if msg
     redirect_to :action => :index
 end
