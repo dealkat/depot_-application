@@ -1,6 +1,6 @@
 class Order < ActiveRecord::Base
   has_many :line_items
-
+#  belongs_to :products
   PAYMENT_TYPES = [
   # Displayed         stored in db
   [ "Check" ,          "check" ],
@@ -8,6 +8,10 @@ class Order < ActiveRecord::Base
   [ "Purchase order" , "po" ]
 ]
 
+  ACTIONS =[
+    ["delete", "1"],
+    ["edit", "2"]
+  ]
   def add_line_items_from_cart(cart)
     cart.items.each do |item|
       li = LineItem.from_cart_item(item)

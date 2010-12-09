@@ -1,9 +1,15 @@
 ActionController::Routing::Routes.draw do |map|
-  map.root :controller => "products"
+
+  map.root :controller => "store", :action => 'index'
   map.logout '/logout', :controller => 'logins', :action => 'destroy'
   map.login '/login', :controller => 'logins', :action => 'new'
+  map.create '/create', :controller => 'logins', :action => 'create'
   map.register '/register', :controller => 'users', :action => 'create'
   map.signup '/signup', :controller => 'users', :action => 'new'
+#  map.info '/info', :controller => 'info', :action => 'sort'
+#  map.order '/orders', :controller => 'info', :action => 'who_bought'
+#  map.users '/users', :controller => 'users', :action => 'index'
+#  map.info '/info', :contoller => 'info', :action => 'who_bought'
   map.resources :users
 
   map.resource :login

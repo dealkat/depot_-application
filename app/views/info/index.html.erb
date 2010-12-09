@@ -1,0 +1,61 @@
+<h1> List of Orders</h1>
+<%  form_tag('/index') %>
+<p>
+  <%= select_tag :actions, "<option>-Select action</option>" + options_for_select([ "delete", "edit" ]) %>
+<%= submit_tag "go" , :class => "submit" %>
+</p>
+          
+<table width="100%" cellspacing="0" cellpadding="0" border="1">
+	<tr>
+          <th width="1%" align="center"> <%=  check_box_tag "checkall","", false, :onclick=>"checkAll();" %></th>
+          <%#*<th width="1%" align="center"> <%=  check_box "checkall',parmas[:id], false, :onclick=>"checkAll();" %></th>%>
+		<th width="30%"> 
+			<%if params[:sort]=="asc" || !params[:sort]%>
+				<%=link_to "Title",:controller=>:info, :action=>:index, :table => "orders", :sort=>"desc",:column=>"name"%>
+			<%elsif params[:sort]=="desc"%>	
+				<%=link_to "Title",:controller=>:info, :action=>:index, :table => "orders",:sort=>"asc",:column=>"name"%>
+			<%end%>
+		</th>
+                <th width="30%" align="left">
+                  <%if params[:sort]=="asc" || !params[:sort]%>
+                  <%=link_to "Pay Type",:controller=>:info, :action=>:index, :table => "orders",:sort=>"desc",:column=>"pay_type"%>
+                  <%elsif params[:sort]=="desc" %>
+                  <%=link_to "Pay Type",:controller=>:info, :action=>:index, :table => "orders",:sort=>"asc",:column=>"pay_type"%>
+                  <%end%>
+
+                 </th>
+		<th width="30%" align="left">
+                  <%if params[:sort]=="asc" || !params[:sort]%>
+                  <%=link_to "Book Title",:controller=>:info, :action=>:index,:table => "products",:sort=>"desc",:column=>"id"%>
+                  <%elsif params[:sort]=="desc"%>
+                  <%=link_to "Book Title",:controller=>:info, :action=>:index,:table => "products",:sort=>"asc",:column=>"id"%>
+                  <%end%>
+                  </th>
+
+	</tr>
+		<%for lineitem in @lineitems %>
+	<tr>
+                        <td width="1%"><%= check_box_tag "orders[]", false%> </td>
+                        <td width="30%"><%= lineitem.order.name %></td>
+			<td width="30%" ><%= lineitem.order.pay_type %></td>
+			<td width="30"> <%=  lineitem.product.title %></td>
+	</tr>
+                <%end%>
+</table>
+<%#end%>
+
+<script>
+function checkAll()
+{
+	var rs = ($('checkall').checked)?true:false;
+	var chkBoxArr = $$('input[type="checkbox"]');
+        for(i=0;i<chkBoxArr.length;i++)
+	{		
+	  	if(chkBoxArr[i].id == 'orders_')
+  		{
+			   chkBoxArr[i].checked = rs;
+		  }
+	}
+}
+</script>
+

@@ -1,4 +1,8 @@
 class ProductsController < ApplicationController
+  before_filter :login_required
+
+  layout "store"
+
   # GET /products
   # GET /products.xml
   def index

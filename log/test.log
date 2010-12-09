@@ -1,0 +1,88 @@
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`login` = 'quentin') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'quire@example.com') LIMIT 1[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `salt`, `created_at`, `crypted_password`, `remember_token_expires_at`, `updated_at`, `remember_token`, `login`, `email`) VALUES('', '65c4cfbae12ed8780ff01fdd81c3759aeb083459', '2010-12-06 11:46:43', 'b5b57e4080eb8598eb31b7d494fbb6ea48cbe6a8', NULL, '2010-12-06 11:46:43', NULL, 'quire', 'quire@example.com')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (5.9ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'quentin2' AND `users`.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'quentin@example.com' AND `users`.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-12-06 11:46:43', `login` = 'quentin2' WHERE `id` = 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`login` = 'quentin2') LIMIT 1[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mUser Update (0.1ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-12-06 11:46:43', `remember_token_expires_at` = '2010-12-20 11:46:43', `remember_token` = '39bc37b30ee4a012c6bc3b62a73bb9f4f572fa5e' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-12-06 11:46:43', `remember_token_expires_at` = '2010-12-13 11:46:43', `remember_token` = 'cad5310d8144ab98ce599cadacc46c1d0c660316' WHERE `id` = 1[0m
+  [4;35;1mSQL (11.9ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mUser Update (0.1ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-12-06 11:46:43', `remember_token_expires_at` = '2010-12-13 11:46:43', `remember_token` = '8dae9b1d02331d187b8790a31e2570bd2bf00e10' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`email` IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`login` IS NULL) LIMIT 1[0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'quire@example.com') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'quire@example.com') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mUser Exists (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'quire@example.com') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'quentin' AND `users`.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'quentin@example.com' AND `users`.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-12-06 11:46:43', `crypted_password` = '1fddb4c1a46cddb9bdb72be4081ac509d88b549e' WHERE `id` = 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'quentin') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-12-06 11:46:43', `remember_token_expires_at` = '2010-12-20 11:46:43', `remember_token` = 'ed438d21f7f91d09e7738460d99fbc15b1471ee8' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mUser Update (0.1ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-12-06 11:46:43', `remember_token_expires_at` = '2010-12-20 11:46:43', `remember_token` = '5ed2bf2f63833b5714c17c5c19c0c293816060c3' WHERE `id` = 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-12-06 11:46:43', `remember_token_expires_at` = NULL, `remember_token` = NULL WHERE `id` = 1[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mROLLBACK[0m

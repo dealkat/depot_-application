@@ -14,17 +14,31 @@
     <div id="columns">
       <div id="side">
         <div id ="cart"></div>
-        <%#= render(:partial => "cart", :object => @cart) %>
-        <% hidden_div_if(@cart.items.empty?, :id => "cart" ) do %>
-  <%= render(:partial => "cart" , :object => @cart) %>
-<% end %>
-
+          <%  if @cart %>
+            <% hidden_div_if(@cart.items.empty?, :id => "cart" ) do %>
+              <%= render(:partial => "cart" , :object => @cart) %>
+            <% end %>
+          <% end %>
         <a href="http://www....">Home</a><br />
         <a href="http://www..../faq">Questions</a><br />
         <a href="http://www..../news">News</a><br />
         <a href="http://www..../contact">Contact</a><br />
         <p> This page is opened on <%= time %> </p>
-      </div>
+
+          <% if session[:user_id] %> <br />
+          <p> You are logged in as <%= current_user.login %> </p>
+          <%# render :text => :user_id.inspect and return false %>
+          
+              <%= link_to 'Orders',    :controller => 'info', :action => 'index' %><br />
+              <%= link_to 'Products', :controller => 'products' %><br />
+              <%= link_to 'Users',     :controller => 'users', :action => 'index'   %><br />
+                <br />
+                <%= link_to 'Logout', logout_path %>
+              <% else %>
+                <%= link_to 'Administrator Login', :controller => 'login' %>
+          <% end %>
+
+              </div>
       <div id="main">
         <% if flash[:notice] -%>
           <div id="notice"><%= flash[:notice] %></div>

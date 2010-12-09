@@ -1,5 +1,7 @@
 class Product < ActiveRecord::Base
+  has_many :orders, :through => :line_items
   has_many :line_items
+
   validates_presence_of :title, :description, :image_url
   validates_numericality_of :price
   validate :price_must_be_atleast_one_cent

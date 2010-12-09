@@ -1,25 +1,31 @@
 # This controller handles the login/logout function of the site.  
 class LoginsController < ApplicationController
+  layout "store"
   # Be sure to include AuthenticationSystem in Application Controller instead
   include AuthenticatedSystem
 
   # render new.erb.html
-  def new
-     create
+    def new
+#     redirect_back_or_default ('/')
   end
 
   def create
+#    render :text => "Hi" and return false
     @user = User.authenticate(params[:login], params[:password])
+    
+#    render :text => @user.login and return false
     if @user
-      render :text=>@user.inspect and return false
+#      render :text=>@user.inspect and return false
       # Protects against session fixation attacks, causes request forgery
       # protection if user resubmits an earlier form using back
       # button. Uncomment if you understand the tradeoffs.
       # reset_session
+#      logout_keeping_session!
       self.current_user = @user
+#      handle_remember_cookie! new_cookie_flag
       flash[:notice] = "Logged in successfully"
-      redirect_to "/"
-    else
+      redirect_to :action => :welcome
+      else
       note_failed_signin
       @login       = params[:login]
       @remember_me = params[:remember_me]
@@ -33,6 +39,11 @@ class LoginsController < ApplicationController
     flash[:notice] = "You have been logged out."
     redirect_back_or_default('/')
   end
+
+  def welcome
+  @total_orders = Order.count
+  end
+
 
 protected
   # Track failed login attempts

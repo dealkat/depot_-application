@@ -1,4 +1,6 @@
 class StoreController < ApplicationController
+  #before_filter :login_required
+
   def index
     @products = Product.find_products_for_sale
     @cart = find_cart

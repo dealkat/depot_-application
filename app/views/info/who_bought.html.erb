@@ -1,0 +1,13 @@
+
+
+<%= "who_bought.html" %>
+
+<h3>People Who Bought <%= @product.title %></h3>
+<ul>
+  <% for order in @orders -%>
+     <li>
+          <%= mail_to order.email, order.name %>
+     </li>
+  <% end -%>
+</ul>
+

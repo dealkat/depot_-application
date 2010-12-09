@@ -1,4 +1,5 @@
 class LineItem < ActiveRecord::Base
+#  has_many :orders
   belongs_to :order
   belongs_to :product
 def self.from_cart_item(cart_item)

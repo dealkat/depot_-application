@@ -1,0 +1,14 @@
+<h1> List of ordereds </h1>
+<table width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<th width="33%"> Name</th>
+		<th> Pay type</th>
+		<th> Book Title</th>
+	</tr>
+		<%for order in @orders%>
+	<tr>
+			<td width="80%"><%= order.name %></td>
+			<td><%= order.pay_type %></td>
+	</tr>
+	<%end%>
+</table>
